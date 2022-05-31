@@ -5,15 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro a Crypto</title>
+    <script src="codigo.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <header>
-   <h1>Crypto para principiantes</h1>
-   <h2>Para que arranques en este maravilloso mundo</h2>
+   <h1>CRYPTO FOR STARTERS</h1>
+   <h2>Lets dream a decentralized future...</h2>
 <div>
     <a id="links1" href="https://youtu.be/SSo_EIwHSd4">Blockchain</a>
     <a id="links1" href="https://youtu.be/l1si5ZWLgy0">Bitcoin</a>
     <a id="links1" href="https://youtu.be/TDGq4aeevgY">Ethereum</a>
+    <a id="links1" href="https://www.youtube.com/watch?v=1F9xlESSbPc">Cardano</a>
+    <a id="links1" href="https://www.youtube.com/watch?v=UUuVDJzUUT4">Dogecoin</a>
+    <a id="links1" href="https://www.youtube.com/watch?v=ria9n042NGA">Ripple</a>
+    <a id="links1" href="https://www.youtube.com/watch?v=vaLeCiqeA1g">Tron</a>
+    <a id="links1" href="https://www.youtube.com/watch?v=Gw3kbl6qbAA">Polkadot</a>
+    <a id="links1" href="https://www.youtube.com/watch?v=CJOEkJNz6dU">Solana</a>
+    <a id="links1" href="https://www.youtube.com/watch?v=tIUHQ7sDoaU"> Chainlink</a>
 </div>
 </header>
 <body>
@@ -26,22 +34,95 @@
 <p>Para operar con criptomonedas se debe recurrir a una plataforma en la cual se abre una cuenta o billetera virtual para poder comprar y vender. Es en la práctica una "casa de cambio" digital. En la Argentina son varias las empresas que ofrecen este servicio.</p>
 <p>Algunos exchanges donde podes operar son:</p>
 <li><a id="links2" href="https://www.binance.com/es">Binance</a></li>
+<li><a id="links2" href="https://www.coinbase.com/es/">Coinbase</a></li>
+<li><a id="links2" href="https://www.kraken.com/">Kraken</a></li>
 <li><a id="links2" href="https://www.lemon.me/">Lemon Cash</a></li>
 <li><a id="links2" href="https://www.belo.app/">Belo app</a></li>
 <li><a id="links2" href="https://www.buenbit.com/">BuenBit</a></li>
 <li><a id="links2" href="https://www.ripio.com/ar/">Ripio</a></li>
 <li><a id="links2" href="https://bitso.com/ar">Bitso</a></li>
+<h3>¿Que son las stablecoins?</h3>
+<p>Las stablecoins son tokens emitidos en blockchain cuyo valor se encuentra vinculado a un activo externo, tales como las monedas nacionales o los minerales preciosos. También conocidas como "monedas estables", por su traducción al español, se tratan de activos que funcionan como representaciones digitales del dólar, el euro e incluso del oro. Es decir, son productos colaterizados que pueden ser comprados o vendidos dentro del mercado de criptomonedas.
+    <br>
+    Las monedas estables nacieron como una solución a la volatilidad intrínseca de las criptomonedas nativas. Mientras activos como bitcoin y ether seducen al público por sus variados beneficios económicos, también asustan a posibles nuevos usuarios debido a las fluctuaciones impredecibles de su precio. Al momento de liquidarse una transacción de BTC, la moneda puede valer significativamente más o mucho menos que al momento de concertar el envío, complicando su usabilidad como activo.
+    <br>
+    Por otro lado, el precio de las stablecoins suele variar muy poco o casi nada. Al estar diseñados para seguir de cerca el valor de la moneda nacional que emulan, mantienen un precio con poca variación diaria, tal y como ocurre con activos como el dólar o el euro. Asimismo, tienen la capacidad de imitar características propias de las criptomonedas como bitcoin, tales como la velocidad de liquidación, las transferencias globales y, en algunos casos, la eliminación de intermediarios. De esta manera, se han convertido en herramientas de refugio de valor en mercados altamente volátiles.
+    <br>
+Las mas conocidas son USDT, DAI, USDC.</p>
+<h3>¿De que depende el precio de una criptomoneda?</h3>
+<h4>Oferta y demanda</h4>
+<p>Lo primero que hay que entender es que los criptoactivos no tienen un valor fijo, es decir que son volátiles. Tampoco están regulados por una institución, ni funcionan con intermediarios, sino que se encuentran en una base de datos descentralizada, blockchain o registro contable compartido. En sí, esos son factores que influyen en su fluctuación, sin embargo, está determinada por otros como la oferta y demanda.<br>Cuando se genera un número pequeño volumen de criptomonedas con mucha demanda, el valor de éstas será alto y viceversa.</p>
+<h4>Percepción y especulación</h4>
+<p>Dos factores también claves para determinar el valor de las criptomonedas son, el primer lugar, la percepción o sentimiento que hay entorno a uno de estos activos digitales, es decir que si es buena, esto generará más demanda y se vuelve al principio de la oferta y la demanda.<br>En segundo lugar está la especulación, que consiste en comprar criptomonedas en algún Exchange y luego revenderlas en otro a un precio mayor. Como ya mencionamos, no existe un estándar en el precio y no están regularizados.</p>
+<h4>Los usuarios</h4>
+<p>Con sus acciones, básicamente son los encargados o responsables de regular el mercado. Si bien, el flujo de activos de todos es determinante, los conocidos como ballenas se vuelven claves en las proyecciones a futuro. Las ballenas son los usuarios con al menos 1,000 bitcoins; al contar con ese volumen de activos, cualquier movimiento que realicen es de gran impacto en el mercado.</p>
+<h3>Cotizador de Criptomonedas</h3>
+<form action="" id="form-search">
+    <select name="moneda" id="moneda">
+        <option value="">Elige tu moneda</option>
+        <option value="USD">Dolar estadounidense</option>
+        <option value="EUR">Euros</option>
+        <option value="ARS">Peso argentino</option>
+    </select>
+    <select name="criptomoneda" id="criptomonedas">
+        <option value="">Elige tu criptomoneda</option>
+    </select>
+    <input class="" type="submit" value="Cotizar">
+    <div class="container-answer"></div>
+    <div class="display-info">
+        <p class="main-price">Precio: <span>$433.33</span></p>
+        <p>Precio más alto del día: <span>$433.33</span></p>
+        <p>Precio más bajo del día: <span>$433.33</span></p>
+        <p>Variación de las ultimas 24 horas: <span>$433.33</span></p>
+        <p>Ultima actualización: <span>$433.33</span></p>
+    </div>
+</form>
+<div id=col-izq class="countdown">
+    <div class="lastbtc">
+        <h1 class="countdown-title">¿Cuanto falta para que no se mine más BTC?</h1>
+    </div>
+        <div class="box">
+            Dias
+            <span id="day">00</span>
+        </div>
+        <div class="box">
+            Horas
+            <span id="hour">00</span>
+        </div>
+        <div class="box">
+            Minutos
+            <span id="minute">00</span>
+        </div>
+        <div class="box">
+            Segundos
+            <span id="second">00</span>
+        </div>
+</div>
+</div>
+</div>
 </div>
 <div id=col-der>
 <h3>Bitcoin</h3>
 <img id="btc" src="./bitcoin-1.webp" alt="No se encontro la foto">
 <p>Bitcoin​ ​ es una criptomoneda y un sistema de pago​​ sin banco central o administrador único.​​ En principio, los usuarios de bitcoin pueden transferir dinero entre sí a través de una red entre iguales usando software libre y de código abierto.</p>
+<h3>Ethereum</h3>
+<img id="btc" src="./ethereum-precio-1140x570.png" alt="No se encontro la foto">
+<p>Ethereum es una plataforma de código abierto, que sirve para ejecutar contratos inteligentes. La plataforma tiene un alto grado de descentralización, a diferencia de otras cadenas de bloques. Es programable, lo que significa que los desarrolladores pueden usarlo en la creación de aplicaciones descentralizadas. El coin de la blockchain de Ethereum se llama Ether.​​</p>
+<h3>Cardano</h3>
+<img id="btc" src="./Cardano-ADA-se-niega-a-perder-su-nivel-de-soporte-mas-importante-Terminara-atravesandolo.jpeg" alt="No se encontro la foto">
+<p>Cardano es una plataforma pública de blockchain que ha surgido con fuerza en los últimos años y se caracteriza porque está avalada por una extensa comunidad y por su naturaleza descentralizada.
+    El activo digital que compite con Bitcoin y Ethereum utiliza la prueba de participación (Proof of Stake) como protocolo de consenso para facilitar las transacciones entre particulares y tener definido un potente sistema de contratos inteligentes.​​</p>
 <div id="figuras">
     <h3>Figuras del ecosistema</h3></li>
-    <img id="satoshi" src="./Bust_of_Satoshi_Nakamoto_in_Budapest.jpeg" alt="No se encontro la foto"> 
-        <img id="Vitalik" src="./vitalik.jpeg" alt="No se encontro la foto">
+    <h4>Satoshi Nakamoto</h4>
+    <img id="satoshi" src="./Bust_of_Satoshi_Nakamoto_in_Budapest.jpeg" alt="No se encontro la foto">
+    <p>Pseudónimo usado por la persona o grupo de personas que crearon el protocolo Bitcoin y su software de referencia. En 2008, Nakamoto publicó un artículo​​ en la lista de correo de criptografía metzdowd​ que describía un sistema P2P de dinero digital.</p> <h4>Vitalik Buterin</h4>
+    <img id="Vitalik" src="./vitalik.jpeg" alt="No se encontro la foto">
+        <p>Programador y escritor ruso, conocido principalmente por ser el cofundador de Ethereum y el cofundador de Bitcoin Magazine.​​​</p>
+        <h4>Charles Hoskinson</h4>
             <img id="charles" src="./CEO-de-Cardano-confia-en-las-capacidades-del-Metaverso-frente-a-las-criptomonedas.jpeg" alt="No se encontro la foto">
-</div>        </div>
-</body>
+            <p>Empresario estadounidense, uno de los fundadores de la plataforma de cadena de bloques Cardano y fue cofundador de la plataforma de cadena de bloques Ethereum.</p>
+</div></div>
+    </body>
 <div class="footer"><p2>Lo se hacer</p2></div>
-</html>
+</html> 
