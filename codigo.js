@@ -40,76 +40,71 @@ or = |
 const form=document.querySelector("#form-search");
 const moneda=document.querySelector("#moneda");
 const criptomoneda=document.querySelector("#criptomonedas");
-const form=document.querySelector("#form-search");
+var precio = document.getElementById("main-price")
 
-document.addEventListener('FOMContentLoaded', () =>{consultarCriptos();
-   form.addEventListener('submit',submitForm);
-   moneda.addEventListener('change', getValue);
-   criptomoneda.addEventListener('change', getValue);
+document.addEventListener('FOMContentLoaded', () =>{consultarCriptos(moneda,criptomoneda);
 })
 
+var objBusqueda=[]
+
 function submitForm(e){
-   e.preventDefault();
    const {moneda, criptomoneda} = objBusqueda;
-
-   console.log(moneda);
-   console.log(criptomoneda);
+   consultarCriptos(objBusqueda.moneda,objBusqueda.criptomoneda)
 }
 
-function getValue(e){
-   objBusqueda[e.target.name]=e.target.value;
-   console.log(e.target.value);
-   console.log(e.target.name);
+function getValueofmoneda(e){
+   console.log(e.target);
+   objBusqueda["moneda"]=document.getElementById("moneda").value;
+   console.log(objBusqueda);
 }
 
-function consultarCriptos(){
-   const url='https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD';
+function getValueofcriptomoneda(e){
+   console.log(e.target);
+   objBusqueda["criptomoneda"]=document.getElementById("criptomoneda").value;
+   console.log(objBusqueda);
+}
+
+function consultarCriptos(moneda,criptomoneda){
+   const url=`https://min-api.cryptocompare.com/data/price?fsym=${criptomoneda}&tsyms=${moneda}`;
    fetch(url)
    .then(respuesta => respuesta.json())
    .then(respuestaJson => {
-      selectCrriptos(respuestaJson.Data);
+      document.getElementById('main-price').innerText=respuestaJson[moneda];
       console.log(respuestaJson);
    })
    .catch(error=>console.log(error));
 }
 
-function selectCriptos(criptos){
-   criptos.forEach(cripto => {
-      const{FullName, Name}=cripto.CoinInfo;
-      const option=document.createElement("option");
-      option.value = Name;
-      option.textContent=FullName;
-      criptomoneda.appendChild(option);
-   });
-}
 
 
-var day = document.getElementById('day')
-var second = document.getElementById('second')
-var hour = document.getElementById('hour')
-var minute = document.getElementById('minute')
+
+
+
 
 var lastbtc = new Date()
 lastbtc.setFullYear(2140, 02, 20);
-lastbtc.setHours(20);
-lastbtc.setMinutes(30);
+lastbtc.setHours(00);
+lastbtc.setMinutes(00);
 
 function compararFechas(){
    var now = new Date();
 
    var distance = lastbtc - now;
-
    var dias = Math.floor(distance / (1000 * 60 * 60 * 24));
    var horas = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
    var minutos = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
    var segundos = Math.floor((distance % (1000 * 60)) / 1000);
-   
-   day.innerText = dias;
-   hour.innerText = horas;
-   minute.innerText = minutos;
-   second.innerText = segundos;
+  
+   document.getElementById('day').innerText = dias;
+   document.getElementById('hour').innerText = horas;
+  document.getElementById('minute').innerText = minutos;
+  document.getElementById('second').innerText = segundos;
 }
 
 setInterval(
-   function() { compararFechas(); } , 10
+   function() { compararFechas(); } , 1000
 )
+
+window.onload = function () {
+   compararFechas();
+};

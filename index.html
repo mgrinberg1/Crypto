@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro a Crypto</title>
-    <script src="codigo.js" defer></script>
+    <script src="./codigo.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <header>
@@ -56,30 +56,38 @@ Las mas conocidas son USDT, DAI, USDC.</p>
 <p>Dos factores también claves para determinar el valor de las criptomonedas son, el primer lugar, la percepción o sentimiento que hay entorno a uno de estos activos digitales, es decir que si es buena, esto generará más demanda y se vuelve al principio de la oferta y la demanda.<br>En segundo lugar está la especulación, que consiste en comprar criptomonedas en algún Exchange y luego revenderlas en otro a un precio mayor. Como ya mencionamos, no existe un estándar en el precio y no están regularizados.</p>
 <h4>Los usuarios</h4>
 <p>Con sus acciones, básicamente son los encargados o responsables de regular el mercado. Si bien, el flujo de activos de todos es determinante, los conocidos como ballenas se vuelven claves en las proyecciones a futuro. Las ballenas son los usuarios con al menos 1,000 bitcoins; al contar con ese volumen de activos, cualquier movimiento que realicen es de gran impacto en el mercado.</p>
-<h3>Cotizador de Criptomonedas</h3>
-<form action="" id="form-search">
-    <select name="moneda" id="moneda">
+<h2>Cotizador de Criptomonedas</h2>
+<div id="form-search">
+    <select name="moneda" onchange=getValueofmoneda(this) id="moneda">
         <option value="">Elige tu moneda</option>
         <option value="USD">Dolar estadounidense</option>
         <option value="EUR">Euros</option>
         <option value="ARS">Peso argentino</option>
     </select>
-    <select name="criptomoneda" id="criptomonedas">
+    <select name="criptomoneda" onchange=getValueofcriptomoneda(this) id="criptomoneda">
         <option value="">Elige tu criptomoneda</option>
+        <option value="BTC">Bitcoin</option>
+        <option value="ETH">Ether</option>
+        <option value="MATIC">MATIC</option>
+        <option value="ADA">Cardano</option>
+        <option value="DOT">Polkadot</option>
+        <option value="DOGE">Dogecoin</option>
+        <option value="TRX">Tron</option>
+        <option value="LINK">Chainlink</option>
+        <option value="BNB">Binance</option>
+        <option value="SOL">Solana</option>
+        <option value="LUNA">Luna</option>
+        <option value="XRP">Ripple</option>
     </select>
-    <input class="" type="submit" value="Cotizar">
+    <button class="" onclick=submitForm(this)>Cotizar</button>
     <div class="container-answer"></div>
     <div class="display-info">
-        <p class="main-price">Precio: <span>$433.33</span></p>
-        <p>Precio más alto del día: <span>$433.33</span></p>
-        <p>Precio más bajo del día: <span>$433.33</span></p>
-        <p>Variación de las ultimas 24 horas: <span>$433.33</span></p>
-        <p>Ultima actualización: <span>$433.33</span></p>
+        <h2 >Precio: $<span id="main-price">0</span></h2>
     </div>
-</form>
-<div id=col-izq class="countdown">
+</div>
+<div id=col-izq class="countdown"   >
     <div class="lastbtc">
-        <h1 class="countdown-title">¿Cuanto falta para que se mine el último bloque de BTC?</h1>
+        <h2 class="countdown-title">¿Cuanto falta para que se mine el último bloque de BTC?</h2>
     </div>
         <div class="box">
             Dias

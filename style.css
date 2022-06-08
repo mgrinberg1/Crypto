@@ -1,21 +1,21 @@
-header{background-color: black;}
-h1{text-align: center; color: yellow;}
-h2{text-align: center;color: yellow;}
-#col-izq{width: 70%;float: left;}
+header{background-color: rgb(36, 61, 88);}
+h1{text-align: center; color: rgb(32, 208, 221);}
+h2{text-align: center;color: rgb(32, 208, 221);}
+#col-izq{width: 65%;float: left;}
 #col-der{width: 30%;float: right;}
 #blockchain{width:800px;height:300px;}
 #btc{width:400px;height:180px;}
-#links1{color: yellow;}
+#links1{color: rgb(32, 208, 221);}
 #satoshi{width:400px;height:550px;}
 #Vitalik{width:400px;height:300px;}
 #charles{width:400px;height:300px;}
-body{background-color: rgb(155, 155, 125);}
-#links2{color: black;}
+body{background-color: rgb(36, 61, 88);color: aliceblue;}
+#links2{color: aliceblue;}
 .footer{
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     padding: 1rem;
-background-color:white;
+background-color:rgb(240, 230, 98);
     text-align: center;}
