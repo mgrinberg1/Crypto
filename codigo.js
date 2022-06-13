@@ -1,42 +1,3 @@
-//html y css son lenguajes de maquetado, JS es lenguaje de programacion
-//resolver problemas logicos o matematicos
-// la programacion es una herramienta para resolver problemas
-//pensamiento computacional:
-// descomposicion: descomponer el problema
-//patrones: similitudes
-// abstraccion: achicar el problema, eliminar lo superfluo
-// algoritmos: pasos para resolver el problema
- /*variables) espacio en memoria donde se almacena
-   un valor
-   que es? un cajon
-   como armo una variable?
-   let nombreDeLaVariable="valor"
-   let nombre= "MATIAS"
-   = es el operador de asignación
-   var << para crear variables
-
-   Tipos de datos:
-numerico: enteros o con coma (integer, float)
-strings: cadena de caracteres
-booleano: true or false, 0 o 1
-+ > suma o concatena
-NaN = Not a Number
-JS usa camelCase
-las constantes se escriben en MAYUSCULA
-
-Division:
-/ >> cociente
-% >> resto
-= asigna un valor a una variable
-== pregunta si el valor coinciden
-=== pregunta si el valor y el tipo de dato coincide
-
-and = &&
-or = |
-
-!true = false
-!false = true
-   */
 const form=document.querySelector("#form-search");
 const moneda=document.querySelector("#moneda");
 const criptomoneda=document.querySelector("#criptomonedas");
@@ -75,14 +36,8 @@ function consultarCriptos(moneda,criptomoneda){
    .catch(error=>console.log(error));
 }
 
-
-
-
-
-
-
 var lastbtc = new Date()
-lastbtc.setFullYear(2140, 02, 20);
+lastbtc.setFullYear(2140, 01, 01);
 lastbtc.setHours(00);
 lastbtc.setMinutes(00);
 

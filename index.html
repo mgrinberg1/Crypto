@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro a Crypto</title>
+    <title>cryptonoobs</title>
     <script src="./codigo.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <header>
-   <h1>CRYPTO FOR STARTERS</h1>
-   <h2>Lets dream a decentralized future...</h2>
+   <h1><b>cryptonoobs</b></h1>
+   <h2>welcome to the dark side of the economy</h2>
 <div>
     <a id="links1" href="https://youtu.be/SSo_EIwHSd4">Blockchain</a>
     <a id="links1" href="https://youtu.be/l1si5ZWLgy0">Bitcoin</a>
@@ -37,7 +37,7 @@
 <li><a id="links2" href="https://www.coinbase.com/es/">Coinbase</a></li>
 <li><a id="links2" href="https://www.kraken.com/">Kraken</a></li>
 <li><a id="links2" href="https://www.lemon.me/">Lemon Cash</a></li>
-<li><a id="links2" href="https://www.belo.app/">Belo app</a></li>
+<li><a id="links2" href="https://www.belo.app/">Belo</a></li>
 <li><a id="links2" href="https://www.buenbit.com/">BuenBit</a></li>
 <li><a id="links2" href="https://www.ripio.com/ar/">Ripio</a></li>
 <li><a id="links2" href="https://bitso.com/ar">Bitso</a></li>
@@ -60,50 +60,84 @@ Las mas conocidas son USDT, DAI, USDC.</p>
 <div id="form-search">
     <select name="moneda" onchange=getValueofmoneda(this) id="moneda">
         <option value="">Elige tu moneda</option>
-        <option value="USD">Dolar estadounidense</option>
-        <option value="EUR">Euros</option>
-        <option value="ARS">Peso argentino</option>
+        <option value="USD">DOLAR ESTADOUNIDENSE</option>
+        <option value="EUR">EURO</option>
+        <option value="GBP">LIBRAS</option>
+        <option value="ARS">PESO ARGENTINO</option>
+        <option value="BRL">REAL BRAZUCA</option>
+        <option value="CLP">PESO CHILENO</option>
+        <option value="UYU">PESO URUGUAYO</option>        
+        <option value="CAD">DOLAR CANADIENSE</option>
+        <option value="CNY">YUAN CHINO</option>
+        <option value="ILS">SHEKEL ISRAELI</option>
+        <option value="RUB">RUBLO RUSO</option>
+        <option value="VES">BOLIVAR VENEZOLANO</option>
     </select>
     <select name="criptomoneda" onchange=getValueofcriptomoneda(this) id="criptomoneda">
         <option value="">Elige tu criptomoneda</option>
-        <option value="BTC">Bitcoin</option>
-        <option value="ETH">Ether</option>
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+        <option value="USDT">USDT</option>
+        <option value="USDC">USDC</option>
+        <option value="BNB">BNB</option>
+        <option value="ADA">ADA</option>
+        <option value="SOL">SOL</option>
+       <option value="DOT">DOT</option>
+        <option value="DAI">DAI</option>
+        <option value="AVAX">AVAX</option>
         <option value="MATIC">MATIC</option>
-        <option value="ADA">Cardano</option>
-        <option value="DOT">Polkadot</option>
-        <option value="DOGE">Dogecoin</option>
-        <option value="TRX">Tron</option>
-        <option value="LINK">Chainlink</option>
-        <option value="BNB">Binance</option>
-        <option value="SOL">Solana</option>
-        <option value="LUNA">Luna</option>
-        <option value="XRP">Ripple</option>
+        <option value="ALGO">ALGO</option>
+        <option value="UNI">UNI</option>
+        <option value="MANA">MANA</option>
+        <option value="AXS">AXS</option>
+        <option value="SAND">SAND</option>
+        <option value="SLP">SLP</option>
+        <option value="TRX">TRX</option>
+        <option value="LINK">LINK</option>
+        <option value="LTC">LTC</option>
+        <option value="XRP">XRP</option>
+        <option value="AAVE">AAVE</option>
+        <option value="UBI">UBI</option>
+        <option value="XMR">XMR</option>
+        <option value="VET">VET</option>
+        <option value="FIL">FIL</option>
+        <option value="CAKE">CAKE</option>
+        <option value="EGLD">EGLD</option>
+        <option value="1INCH">1INCH</option>
+        <option value="DOGE">DOGE</option>
+        <option value="SHIB">SHIB</option>
+        <option value="LUNA">LUNA</option>
+        <option value="UST">UST</option>
+        <option value="LUNC">LUNC</option>
+        <option value="USTC">USTC</option>
+        <option value="CELO">CELO</option>
+        <option value="ETC">ETC</option>
     </select>
     <button class="" onclick=submitForm(this)>Cotizar</button>
     <div class="container-answer"></div>
     <div class="display-info">
-        <h2 >Precio: $<span id="main-price">0</span></h2>
+        <h2 id=preciobox>Precio: $<span id="main-price">0</span></h2>
     </div>
 </div>
-<div id=col-izq class="countdown"   >
+<div id=contador class="countdown"   >
     <div class="lastbtc">
         <h2 class="countdown-title">¿Cuanto falta para que se mine el último bloque de BTC?</h2>
+        <p>El primer 90% de Bitcoin tardó 12 años en ser minado, pero la cantidad restante para alcanzar la totalidad establecida en el código fuente de Bitcoin demorará proporcionalmente bastante más. Estos últimos 2 millones por desbloquear serán completados recién en el año 2140.</p>
+        <p>Esto se sabe con cierta precisión porque la emisión de nuevos bitcoins es constante, y toma tanto tiempo minar el 10% restante, porque cada vez se emiten menos.</p>
+        <p> Cuando la oferta máxima de 21 millones de bitcoin se haya minado, los usuarios no podrán seguir recibiendo bitcoins nuevos por verificar los bloques. Sin embargo, seguirán recibiendo comisiones por transacción que aportarán aquellos que realicen pagos, como incentivo por verificar las transacciones.
+        </p>
     </div>
-        <div class="box">
-            Dias
-            <span id="day">00000</span>
+        <div class="box" style="display: inline;">
+            <span id="day">00000</span>  dias
         </div>
-        <div class="box">
-            Horas
-            <span id="hour">00</span>
+        <div class="box" style="display: inline;">
+            <span id="hour">00</span> horas
         </div>
-        <div class="box">
-            Minutos
-            <span id="minute">00</span>
+        <div class="box" style="display: inline;">
+            <span id="minute">00</span> minutos
         </div>
-        <div class="box">
-            Segundos
-            <span id="second">00</span>
+        <div class="box" style="display: inline;">
+            <span id="second">00</span> segundos
         </div>
 </div>
 </div>
@@ -132,5 +166,5 @@ Las mas conocidas son USDT, DAI, USDC.</p>
             <p>Empresario estadounidense, uno de los fundadores de la plataforma de cadena de bloques Cardano y fue cofundador de la plataforma de cadena de bloques Ethereum.</p>
 </div></div>
     </body>
-<div class="footer"><p2>Lo se hacer</p2></div>
+<div class="footer"><p2>Contrataciones: mgrinberg@itba.edu.ar</p2></div>
 </html> 
