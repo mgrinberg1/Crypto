@@ -10,7 +10,7 @@ p {font-family: 'Roboto', sans-serif;color: rgb(134, 132, 113);}
 .box{background-color: rgb(243, 242, 234); color: rgba(163, 142, 45, 0.842); font-size:x-large;font-family: Verdana, Geneva, Tahoma, sans-serif;font-style: italic; text-align: center;}
 #contador{text-align: center;}
 #col-der{width: 30%;float: right;}
-#blockchain{width:800px;height:300px;}
+#blockchain{width: 100%;}
 #btc{width:400px;height:180px;}
 #eth{width:380px;height:180px;}
 #ada{width:370px;height:180px;}
